@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gökyüzü Günlüğü - Gözlem Akışı</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-star-of-life"></i>
+                Gökyüzü Günlüğü
+            </a>
+            <nav class="main-nav">
+                <a href="#">Gözlem Akışı</a>
+                <a href="#">Bugün Gökyüzünde</a>
+                <a href="#">Topluluk</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-primary" id="add-observation-btn">
+                    <i class="fa-solid fa-plus"></i> Gözlem Ekle
+                </button>
+                <i class="fa-regular fa-bell notification-icon"></i>
+                <img src="https://i.pravatar.cc/40?u=kullanici1" alt="Profil Resmi" class="profile-avatar">
+            </div>
+        </div>
+    </header>
+
+    <main class="container page-content">
+        
+        <aside class="sidebar filters">
+            <h3>Filtreler</h3>
+            <div class="filter-group">
+                <h4>Kategori</h4>
+                <ul>
+                    <li><a href="#" class="active">Tümü</a></li>
+                    <li><a href="#">Gezegenler</a></li>
+                    <li><a href="#">Derin Uzay</a></li>
+                    <li><a href="#">Takımyıldızlar</a></li>
+                    <li><a href="#">Meteor Yağmurları</a></li>
+                </ul>
+            </div>
+            <div class="filter-group">
+                <h4>Ekipman</h4>
+                <ul>
+                    <li><a href="#">Tümü</a></li>
+                    <li><a href="#">Çıplak Göz</a></li>
+                    <li><a href="#">Dürbün</a></li>
+                    <li><a href="#">Teleskop</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <section class="feed">
+            
+            <article class="observation-card">
+                <div class="card-header">
+                    <img src="https://i.pravatar.cc/40?u=kullanici2" alt="Avatar" class="profile-avatar">
+                    <div>
+                        <strong>Galaksi Kaşifi</strong>
+                        <span>@galaksikasifi · 3 saat önce</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Andromeda Galaksisi (M31) - İlk Denemem!</h2>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Andromeda_Galaxy_%28with_h-alpha%29.jpg/1024px-Andromeda_Galaxy_%28with_h-alpha%29.jpg" alt="Andromeda Galaksisi" class="card-image">
+                    <p class="card-description">Dün gece ilk defa M31'i bu kadar net görüntüleyebildim. Hava biraz pusluydu ama sonuçtan memnunum.</p>
+                </div>
+                <div class="card-details">
+                    <span><i class="fa-solid fa-location-dot"></i> İstanbul, Türkiye</span>
+                    <span><i class="fa-solid fa-telescope"></i> Celestron 8SE</span>
+                    <span><i class="fa-solid fa-cloud-moon"></i> Hafif Puslu</span>
+                </div>
+                <div class="card-footer">
+                    <button><i class="fa-regular fa-star"></i> Beğen (12)</button>
+                    <button><i class="fa-regular fa-comment"></i> Yorum Yap (4)</button>
+                    <button><i class="fa-regular fa-share-from-square"></i> Paylaş</button>
+                </div>
+            </article>
+
+            <article class="observation-card">
+                <div class="card-header">
+                    <img src="https://i.pravatar.cc/40?u=kullanici3" alt="Avatar" class="profile-avatar">
+                    <div>
+                        <strong>Ay Tutkunu</strong>
+                        <span>@aytutkunu · 1 gün önce</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Jüpiter ve Uyduları</h2>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Jupiter_and_its_four_Galilean_moons.jpg/1024px-Jupiter_and_its_four_Galilean_moons.jpg" alt="Jüpiter" class="card-image">
+                    <p class="card-description">Çıplak gözle bile parlak bir nokta, ama dürbünle bakınca 4 uydusunu (Io, Europa, Ganymede, Callisto) seçebilmek müthiş!</p>
+                </div>
+                <div class="card-details">
+                    <span><i class="fa-solid fa-location-dot"></i> Ankara, Türkiye</span>
+                    <span><i class="fa-solid fa-binoculars"></i> 10x50 Dürbün</span>
+                    <span><i class="fa-solid fa-moon"></i> Açık</span>
+                </div>
+                <div class="card-footer">
+                    <button><i class="fa-regular fa-star"></i> Beğen (45)</button>
+                    <button><i class="fa-regular fa-comment"></i> Yorum Yap (9)</button>
+                    <button><i class="fa-regular fa-share-from-square"></i> Paylaş</button>
+                </div>
+            </article>
+
+        </section>
+
+        <aside class="sidebar widgets">
+            <div class="widget-box">
+                <h3>Trend Etiketler</h3>
+                <ul class="hashtags">
+                    <li><a href="#">#Jüpiter</a></li>
+                    <li><a href="#">#Astrofotoğrafçılık</a></li>
+                    <li><a href="#">#Perseid</a></li>
+                    <li><a href="#">#Satürn</a></li>
+                    <li><a href="#">#M42</a></li>
+                </ul>
+            </div>
+            <div class="widget-box">
+                <h3>Yardım Bekleyenler</h3>
+                <ul class="help-requests">
+                    <li><a href="#">Yeni başlayan için teleskop tavsiyesi?</a></li>
+                    <li><a href="#">Kutup Yıldızı'nı bulamıyorum.</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </main>
+
+    <div id="observation-modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <form id="observation-form">
+                <div class="modal-header">
+                    <h2>Yeni Gözlem Kaydı Oluştur</h2>
+                    <button type="button" class="close-modal-btn" id="close-modal-btn">&times;</button>
+                </div>
+                <div class="form-group">
+                    <label for="file-upload">Fotoğraf Yükle</label>
+                    <input type="file" id="file-upload" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="title">Başlık</label>
+                    <input type="text" id="title" placeholder="Gözleminize bir başlık verin..." class="form-control" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Tarih ve Saat</label>
+                        <input type="datetime-local" id="date" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Konum</label>
+                        <input type="text" id="location" placeholder="Örn: İstanbul, Türkiye" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="equipment">Kullanılan Ekipman</label>
+                    <select id="equipment" class="form-control">
+                        <option value="naked">Çıplak Göz</option>
+                        <option value="binoculars">Dürbün</option>
+                        <option value="telescope">Teleskop</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Gözlem Notları</label>
+                    <textarea id="notes" rows="4" placeholder="Neler gördünüz? Zorluklar, ipuçları..." class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-submit">Gözlemi Paylaş</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
