@@ -1,0 +1,37 @@
+Options -MultiViews
+RewriteEngine On
+
+# =============================================================
+# 1. AYARLAR (LOCALHOST İÇİN KRİTİK)
+# =============================================================
+# Projen "htdocs/sky_social" içindeyse burası böyle kalmalı.
+# Canlı siteye (yasinvefizik.com) yüklediğinde bu satırın başına # koy.
+RewriteBase /sky_social/
+
+# =============================================================
+# 2. .PHP UZANTISINI GİZLEME (DIŞ YÖNLENDİRME)
+# =============================================================
+# Tarayıcı adres çubuğunda "login.php" yazıyorsa "login"e çevir.
+# POST işlemleri veri kaybolmasın diye hariç tutulur.
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+RewriteRule ^([^.]+)$ $1 [L,R=301]
+
+# =============================================================
+# 3. .PHP DOSYALARINI ÇALIŞTIRMA (İÇ YÖNLENDİRME)
+# =============================================================
+# Kullanıcı "login" yazdıysa ve "login.php" diye bir dosya varsa onu aç.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# =============================================================
+# 4. PROFİL YÖNLENDİRMESİ (PRETTY URL)
+# =============================================================
+# Eğer girilen adres bir dosya (!-f) veya klasör (!-d) değilse,
+# Ve yukarıdaki PHP kuralına takılmadıysa (dosya yoksa),
+# Bunu bir "Kullanıcı Adı" olarak kabul et ve profile.php'ye gönder.
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9_-]+)$ profile.php?username=$1 [L,QSA]
